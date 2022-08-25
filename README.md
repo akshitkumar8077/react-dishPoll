@@ -25,10 +25,3 @@ Sample dish object
 ```
 
 Tab2: Show the dishes in the descending order of the points received from the polling. The logged in user should also be able to see his selections in this list so that he knows where his selected dishes stand in the rankings.
-
-## How will the submission be evaluated?
-
-- Functionality: Is the web-app functional and performant?
-- Code Quality: Code Readability and structuring.
-- Exception Handling: No crashes and proper error messages logged.
-- Git Commit practices: Manage your code in github and make frequent commits.
