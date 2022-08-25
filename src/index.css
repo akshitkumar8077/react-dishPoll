@@ -1,13 +1,375 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.capitalise::first-letter {
+  text-transform: capitalize;
+}
+
+/* Header */
+
+.headerc {
+  height: 100px;
+  background: rgb(31, 30, 30);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.logoutButton {
+  outline: none;
+  background: wheat;
+  color: black;
+  height: 40px;
+  width: 100px;
+  font-size: 15px;
+  font-family: monospace;
+  cursor: pointer;
+}
+.logoutButton:hover {
+  background: rgb(255, 204, 109);
+}
+
+/* LOGIN PAGE */
+.loginAll {
+  background: linear-gradient(180deg, #1f1e1e, transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.logText {
+  font-size: 40px;
+  font-weight: 900;
+  color: azure;
+  padding-top: 30px;
+}
+.loginUsersList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* SINGLE USER */
+.singleUserBox {
+  height: 150px;
+  border: 1px solid #ccc;
+  background-color: rgb(105, 105, 105);
+  margin: 25px;
+  border-radius: 10px;
+}
+.singleuserimgname img {
+  height: 70px;
+  width: 70px;
+}
+.singleuserimgname {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 15px;
+  align-items: center;
+  color: honeydew;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.inputandbuttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 15px;
+}
+.inputField {
+  padding: 1px 10px;
+  font-weight: 500;
+}
+.buttonLogIn {
+  outline: none;
+  background: rgb(255, 255, 255);
+  color: black;
+  height: 30px;
+  width: 100px;
+  font-size: 14px;
+  font-family: monospace;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* YOUR POLLS */
+.yourPollsDiv {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* height: 200px; */
+}
+.yourpollstext {
+  margin-top: 15px;
+  font-weight: 900;
+  font-size: 20px;
+}
+.actualPolls {
+  display: flex;
+  /* border: 1px solid brown; */
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  /* padding: 10px 10px; */
+}
+.rankdiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 15px;
+  /* border: 1px solid green; */
+  padding: 10px;
+  width: 23%;
+  font-weight: 500;
+  font-size: 13px;
+}
+.rank {
+  margin: 0 0 20px 0;
+}
+.itemnclear {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.clearOne {
+  margin-top: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+  background: none;
+  font-size: 10px;
+  color: red;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.clearOne:hover {
+  background-color: bisque;
+}
+.clearAllButton {
+  outline: none;
+  border: 1px solid black;
+  background: none;
+  font-weight: 800;
+  font-size: 13px;
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.clearAllButton:hover {
+  color: rgb(198, 2, 2);
+}
+.yesDishName {
+  color: forestgreen;
+}
+.noDishName {
+  color: #ccc;
+}
+
+/* INSIDE APP */
+.tabs {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.tab {
+  border: 1px solid green;
+  margin: 10px 0 0px 0;
+  padding: 15px 25px 15px 30px;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.selectedTab {
+  background: #bbe0ff;
+  transition: 0.4s;
+}
+
+/* DISH POLLS */
+.tableHead {
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 12px 5px 40px;
+  margin: 20px 150px 0 150px;
+  font-size: 16px;
+  font-weight: 600;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* SINGLE DISH POLL */
+.singleRowDish {
+  border: 1px solid #ccc;
+  margin: 0px 150px 0 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.singleRowDishDetails {
+  /* border: 1px solid green; */
+  padding: 10px 35px 6px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+.pollImage {
+  height: 75px;
+  width: 75px;
+  background: #ccc;
+  border-radius: 5px;
+}
+.yourPollRank {
+  /* border: 1px solid blue; */
+  text-align: right;
+  margin-top: -23px;
+  padding-right: 10px;
+  padding-bottom: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  color: forestgreen;
+}
+
+/* DISHES PAGE */
+.dishesPageContainer {
+  margin-top: 20px;
+}
+
+/* SINGLE DISH IN PAGE */
+.dishInPageContainer {
+  border: 1px solid #ccc;
+  margin: 0px 150px 5px 150px;
+  border-radius: 3px;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.disnInPageImage {
+  height: 100px;
+  width: 100px;
+  background: #ccc;
+  border-radius: 5px;
+}
+.titanddes {
+  /* border: 1px solid green; */
+  width: 55%;
+  /* height: 107px; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.titleOnly {
+  /* border: 1px solid grey; */
+  font-size: 16px;
+  font-weight: 800;
+  padding-top: 10px;
+  text-align: left;
+}
+.descriptionOnly {
+  /* border: 1px solid brown; */
+  font-size: 13px;
+  font-weight: 500;
+  padding-top: 10px;
+  text-align: left;
+  color: rgb(86, 86, 86);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.rankingsSelect {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.rankingsSelect div {
+  border: 1px solid gray;
+  padding: 2px;
+  font-weight: 800;
+  font-size: 14px;
+  font-family: monospace;
+  width: 60px;
+  text-align: center;
+  margin: 2px;
+  user-select: none;
+  cursor: pointer;
+}
+.backgroundSelected {
+  background: #91ffb9;
+}
+.backgroundSelected1 {
+  background: #ffb1a5;
+}
+
+/* MOBILE FRIENDLY - RESPONSIVENESS */
+@media screen and (max-width: 750px) {
+  .actualPolls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .rankdiv {
+    width: unset;
+    margin: unset;
+    font-size: 20px;
+  }
+  .clearbuttondiv {
+    margin-top: 10px;
+    margin-left: 120px;
+  }
+  .tabs {
+    margin-top: 20px;
+  }
+  .tableHead {
+    /* display: none; */
+    margin: 20px 10px 0 10px;
+  }
+  .singleRowDish {
+    margin: 0px 10px 0 10px;
+  }
+  .singleRowDishDetails {
+    font-size: 14px;
+  }
+  .dishInPageContainer {
+    margin: 0px 10px 5px 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px 0px;
+  }
+  .dishInPageContainer div {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+  .rankingsSelect {
+    margin-top: 12px !important;
+    flex-direction: row;
+  }
 }
